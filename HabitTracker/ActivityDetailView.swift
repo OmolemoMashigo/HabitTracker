@@ -31,12 +31,13 @@ struct ActivityDetailView: View {
             Button {
                 incrementCompletion()
             } label: {
-                Text("Mark Completed")
-                    .font(.title2.bold())
-                    .padding()
+                Image(systemName: "plus")
+                    .font(.system(size: 32, weight: .bold))
+                    .foregroundColor(.white)
+                    .frame(width: 80, height: 80)
                     .background(.blue)
-                    .foregroundStyle(.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .clipShape(Circle())
+                    .shadow(radius: 10)
             }
             
             Spacer()
